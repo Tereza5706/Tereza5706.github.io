@@ -1,0 +1,323 @@
+
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VESMÍR | Objevuj nekonečno</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #050816;
+    color: white;
+}
+
+header {
+    padding: 25px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(5, 8, 22, 0.95);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+    color: #7dd3fc;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #7dd3fc;
+}
+
+.hero {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    background:
+    radial-gradient(circle at 50% 40%, #263c75 0%, #10152e 35%, #050816 75%);
+}
+
+.hero h1 {
+    font-size: clamp(45px, 8vw, 85px);
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, #fff, #7dd3fc);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.hero p {
+    font-size: 20px;
+    color: #cbd5e1;
+    max-width: 650px;
+    line-height: 1.7;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 15px 30px;
+    background: #38bdf8;
+    color: #050816;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: scale(1.05);
+}
+
+section {
+    padding: 80px 8%;
+}
+
+h2 {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 45px;
+    color: #7dd3fc;
+}
+
+.about {
+    text-align: center;
+    max-width: 850px;
+    margin: auto;
+    line-height: 1.8;
+    color: #cbd5e1;
+    font-size: 18px;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #111a35;
+    padding: 30px;
+    border-radius: 18px;
+    border: 1px solid #263b65;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    border-color: #38bdf8;
+}
+
+.card .emoji {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.card h3 {
+    color: #7dd3fc;
+    margin-bottom: 15px;
+    font-size: 23px;
+}
+
+.card p {
+    color: #cbd5e1;
+    line-height: 1.7;
+}
+
+.fact {
+    text-align: center;
+    background: linear-gradient(135deg, #101d42, #172554);
+    border-radius: 20px;
+    padding: 50px 25px;
+}
+
+.fact p {
+    font-size: 20px;
+    color: #e2e8f0;
+    line-height: 1.7;
+}
+
+.fact button {
+    margin-top: 25px;
+    padding: 13px 25px;
+    border: none;
+    border-radius: 25px;
+    background: #38bdf8;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #02040d;
+    color: #94a3b8;
+}
+
+@media(max-width: 600px) {
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav a {
+        margin: 0 8px;
+        font-size: 14px;
+    }
+
+    section {
+        padding: 60px 6%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo">🌌 VESMÍR</div>
+    <nav>
+        <a href="#domu">Domů</a>
+        <a href="#astronomie">Astronomie</a>
+        <a href="#planety">Planety</a>
+        <a href="#zajimavosti">Zajímavosti</a>
+    </nav>
+</header>
+
+<div class="hero" id="domu">
+    <h1>Objevuj vesmír</h1>
+    <p>
+        Nekonečný prostor plný hvězd, planet, galaxií
+        a tajemství, která čekají na objevení.
+        Vítej ve světě astronomie!
+    </p>
+    <a href="#astronomie" class="btn">Začít objevovat ↓</a>
+</div>
+
+<section id="astronomie">
+    <h2>🔭 Co je astronomie?</h2>
+    <p class="about">
+        Astronomie je věda, která zkoumá vesmír a všechna
+        vesmírná tělesa. Zabývá se hvězdami, planetami,
+        galaxiemi, černými dírami i vznikem samotného vesmíru.
+        Díky astronomii můžeme lépe pochopit, jak funguje
+        svět kolem nás a co se nachází daleko za naší planetou.
+    </p>
+</section>
+
+<section id="planety">
+    <h2>🪐 Sluneční soustava</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <div class="emoji">☿️</div>
+            <h3>Merkur</h3>
+            <p>Nejmenší planeta sluneční soustavy a zároveň planeta nejblíže Slunci.</p>
+        </div>
+
+        <div class="card">
+            <div class="emoji">🌕</div>
+            <h3>Venuše</h3>
+            <p>Nejteplejší planeta sluneční soustavy. Její atmosféra je velmi hustá.</p>
+        </div>
+
+        <div class="card">
+            <div class="emoji">🌍</div>
+            <h3>Země</h3>
+            <p>Náš domov. Jediná planeta, na které máme potvrzený život.</p>
+        </div>
+
+        <div class="card">
+            <div class="emoji">🔴</div>
+            <h3>Mars</h3>
+            <p>Rudá planeta, kterou vědci zkoumají jako možnou budoucí destinaci lidí.</p>
+        </div>
+
+        <div class="card">
+            <div class="emoji">🟠</div>
+            <h3>Jupiter</h3>
+            <p>Největší planeta sluneční soustavy. Má obrovskou bouři zvanou Velká rudá skvrna.</p>
+        </div>
+
+        <div class="card">
+            <div class="emoji">🪐</div>
+            <h3>Saturn</h3>
+            <p>Známý svými nádhernými prstenci, které tvoří především led a kameny.</p>
+        </div>
+
+        <div class="card">
+            <div class="emoji">🔵</div>
+            <h3>Uran</h3>
+            <p>Ledový obr, který se otáčí téměř na boku.</p>
+        </div>
+
+        <div class="card">
+            <div class="emoji">🌊</div>
+            <h3>Neptun</h3>
+            <p>Nejvzdálenější planeta od Slunce. Je známý velmi silnými větry.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="zajimavosti">
+    <h2>✨ Vesmírné zajímavosti</h2>
+
+    <div class="fact">
+        <p id="factText">
+            Vesmír je starý přibližně 13,8 miliardy let!
+        </p>
+
+        <button onclick="newFact()">Další zajímavost 🚀</button>
+    </div>
+</section>
+
+<footer>
+    <p>🌌 VESMÍR | Objevuj nekonečno</p>
+    <p style="margin-top:10px;">© 2026 Astronomie – Vše o vesmíru</p>
+</footer>
+
+<script>
+const facts = [
+    "Vesmír je starý přibližně 13,8 miliardy let!",
+    "Světlo ze Slunce dorazí na Zemi přibližně za 8 minut a 20 sekund.",
+    "V naší galaxii, Mléčné dráze, se nacházejí stovky miliard hvězd.",
+    "Na Saturnu a Jupiteru mohou vznikat diamanty hluboko v atmosféře.",
+    "Ve vesmíru se nachází obrovské množství galaxií.",
+    "Měsíc se od Země každý rok vzdaluje přibližně o 3,8 centimetru.",
+    "Na Venuši trvá jeden oběh kolem osy déle než oběh kolem Slunce."
+];
+
+function newFact() {
+    const random = Math.floor(Math.random() * facts.length);
+    document.getElementById("factText").textContent = facts[random];
+}
+</script>
+
+</body>
+</html>
